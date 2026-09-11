@@ -3,59 +3,76 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Scooks Support</title>
-<meta name="description" content="Help and contact for Scooks, the iPhone app for cataloguing the books you own and want to read.">
+<title>Scooks</title>
+<meta name="description" content="Photograph your bookshelf and Scooks reads the spines, builds your library, and keeps it on your phone.">
+<meta property="og:title" content="Scooks">
+<meta property="og:description" content="Photograph your bookshelf and Scooks reads the spines, builds your library, and keeps it on your phone.">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Rubik:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="page">
-  <header class="masthead">
-    <div class="wordmark"><a href="./">Scooks</a></div>
-    <h1>Support</h1>
-    <div class="dateline">Books you own, books you want</div>
+<div class="page landing">
+  <header class="hero">
+    <div class="wordmark">Scooks</div>
+    <h1>Your shelves, read in one photograph.</h1>
+    <div class="pronounce">[sku̇ks] &middot; for iPhone</div>
+    <p class="lede">Point the camera at a bookshelf. Scooks reads the spines, finds each title, and files them into a library you actually own, on a phone that keeps it to itself.</p>
   </header>
 
-  <p class="standfirst">Scooks catalogues the books on your shelves and the ones still on your list. If something is broken, confusing, or missing, write to me directly.</p>
-
-  <div class="contact-card">
-    <span class="label">Email</span>
-    <a class="address" href="mailto:andrew.z.hale1@gmail.com">andrew.z.hale1@gmail.com</a>
-    <span class="note">Scooks is made by one person. Include your iPhone model and iOS version and I will get back to you as soon as I can.</span>
+  <div class="shelf" aria-hidden="true">
+    <span class="spine" style="width:1.5rem;height:88%;background:#C1315B"></span>
+    <span class="spine" style="width:.85rem;height:74%;background:#1E8F82"></span>
+    <span class="spine" style="width:2.1rem;height:95%;background:#25221D"></span>
+    <span class="spine" style="width:1.1rem;height:67%;background:#FFC145"></span>
+    <span class="spine" style="width:1.35rem;height:82%;background:#F26F63"></span>
+    <span class="spine" style="width:.75rem;height:91%;background:#98365F"></span>
+    <span class="spine" style="width:1.8rem;height:71%;background:#2D7ED7"></span>
+    <span class="spine" style="width:1rem;height:86%;background:#1E8F82"></span>
+    <span class="spine" style="width:1.45rem;height:63%;background:#25221D"></span>
+    <span class="spine" style="width:.9rem;height:79%;background:#FFC145"></span>
+    <span class="spine tilt" style="width:1.25rem;height:70%;background:#C1315B"></span>
   </div>
 
   <section>
-    <h2>Common questions</h2>
-    <div class="faq">
+    <h2>What it does</h2>
+    <div class="features">
       <div>
-        <h3>A Shelf Scan missed books, or got the titles wrong</h3>
-        <p>Shelf Scan reads the spines from your photo, so it struggles with dim light, steep angles, and worn or stylised lettering. Shoot the shelf straight on, fill the frame with one or two rows, and scan again. Anything it still misses can be added by searching for the title.</p>
+        <h3><span class="marker"></span>Shelf Scan</h3>
+        <p>One photograph of a shelf becomes a list of books. Scooks reads the spines, matches them against a catalogue of millions of editions, and shows you what it found before anything is saved.</p>
       </div>
       <div>
-        <h3>Scanning stopped working for a while</h3>
-        <p>Shelf Scan runs against a shared quota, so heavy use in a short window is throttled. The app tells you how long to wait. Scanning resumes on its own after that.</p>
+        <h3><span class="marker"></span>Owned and wanted, side by side</h3>
+        <p>Your collection holds the books on your shelves. The wishlist holds the ones you are still hunting for. Books move between them as your reading does.</p>
       </div>
       <div>
-        <h3>The camera screen is blank</h3>
-        <p>Scooks needs camera access to photograph a shelf. Open the Settings app, find Scooks in the list, and turn Camera on.</p>
+        <h3><span class="marker"></span>Rate what you have read</h3>
+        <p>Give a book stars, or hold a cover to mark it a favourite. Your highest-rated books surface on their own.</p>
       </div>
       <div>
-        <h3>A book has the wrong cover, or none at all</h3>
-        <p>Covers come from the Hardcover catalogue, and some editions have none on file. Scooks draws a placeholder cover in that case, using colours from the book itself.</p>
+        <h3><span class="marker"></span>Covers for everything</h3>
+        <p>Real cover art wherever a catalogue has it. Where none exists, Scooks draws one from the book's own title and colours, so no shelf has a blank spine on it.</p>
       </div>
       <div>
-        <h3>Can I move my collection to a new phone?</h3>
-        <p>Not yet. Your collection is stored only on your device, which is what keeps it private, and there is no account or sync. Deleting the app erases it, so hold onto it until transfer arrives.</p>
+        <h3><span class="marker"></span>Something like this one</h3>
+        <p>Open a book you loved and Scooks suggests titles close to it, drawn from what readers of that book read next.</p>
       </div>
       <div>
-        <h3>How do I request a feature or report a bug?</h3>
-        <p>Email the address above. Concrete reports, especially with a screenshot, get fixed fastest.</p>
+        <h3><span class="marker"></span>No account, ever</h3>
+        <p>There is no sign-up and no profile. Your library is written to your iPhone and nowhere else, and nobody, including us, can read it.</p>
       </div>
     </div>
   </section>
 
+  <div class="status">
+    <span class="stage">Availability</span>
+    <span class="line">Version 1.0 is in TestFlight beta.</span>
+    <span>Write to <a href="mailto:andrew.z.hale1@gmail.com">andrew.z.hale1@gmail.com</a> if you would like to test it.</span>
+  </div>
+
   <nav class="sitenav">
+    <a href="support.html">Support</a>
     <a href="privacy.html">Privacy policy</a>
     <a href="mailto:andrew.z.hale1@gmail.com">Contact</a>
   </nav>
