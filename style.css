@@ -1,0 +1,262 @@
+  /* Scooks site — shared styles */
+  *, *::before, *::after { box-sizing: border-box; }
+  html { color-scheme: light dark; }
+  body { margin: 0; }
+  img { max-width: 100%; }
+
+  :root {
+    --paper: #FBF7EB;
+    --surface: #FFFDF6;
+    --ink: #25221D;
+    --ink-soft: #5E584C;
+    --rule: #E2DCC8;
+    --teal: #1E8F82;
+    --berry: #C1315B;
+    --gold: #FFC145;
+    --shadow: 0 1px 2px rgba(37, 34, 29, .06), 0 8px 24px rgba(37, 34, 29, .05);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #1B1917;
+      --surface: #242120;
+      --ink: #F2EDE0;
+      --ink-soft: #A8A093;
+      --rule: #38332E;
+      --teal: #57C4B4;
+      --berry: #F0819F;
+      --gold: #FFD27A;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px rgba(0, 0, 0, .3);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #1B1917;
+    --surface: #242120;
+    --ink: #F2EDE0;
+    --ink-soft: #A8A093;
+    --rule: #38332E;
+    --teal: #57C4B4;
+    --berry: #F0819F;
+    --gold: #FFD27A;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px rgba(0, 0, 0, .3);
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Rubik, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16.5px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    max-width: 43rem;
+    margin: 0 auto;
+    padding: clamp(2.5rem, 7vw, 5rem) clamp(1.25rem, 5vw, 2rem) 5rem;
+  }
+
+  header.masthead {
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--ink);
+  }
+  .wordmark {
+    font-family: Fraunces, Georgia, serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--teal);
+  }
+  h1 {
+    font-family: Fraunces, Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(2.3rem, 7vw, 3.4rem);
+    line-height: 1.03;
+    letter-spacing: -.02em;
+    text-wrap: balance;
+    margin: 0;
+  }
+  .dateline {
+    font-size: .82rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .standfirst {
+    font-family: Fraunces, Georgia, serif;
+    font-size: 1.22rem;
+    line-height: 1.5;
+    color: var(--ink);
+    margin: 2.25rem 0 0;
+  }
+
+  .pledge {
+    margin: 2rem 0 0;
+    padding: 1.15rem 1.35rem;
+    background: var(--surface);
+    border-left: 3px solid var(--gold);
+    border-radius: 2px;
+    box-shadow: var(--shadow);
+    font-size: .97rem;
+    color: var(--ink-soft);
+  }
+
+  section {
+    margin-top: 3.25rem;
+  }
+  h2 {
+    font-family: Fraunces, Georgia, serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    letter-spacing: -.01em;
+    text-wrap: balance;
+    margin: 0 0 .35rem;
+  }
+  h2::after {
+    content: "";
+    display: block;
+    width: 2.5rem;
+    height: 2px;
+    background: var(--teal);
+    margin-top: .7rem;
+  }
+  p { margin: 1rem 0 0; }
+  strong { font-weight: 600; }
+
+  ul {
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: .85rem;
+  }
+  ul li {
+    position: relative;
+    padding-left: 1.4rem;
+  }
+  ul li::before {
+    content: "";
+    position: absolute;
+    left: .25rem;
+    top: .72em;
+    width: .4rem;
+    height: .4rem;
+    background: var(--berry);
+    border-radius: 50%;
+  }
+
+  .table-wrap {
+    overflow-x: auto;
+    margin-top: 1.5rem;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .93rem;
+    min-width: 32rem;
+  }
+  th {
+    text-align: left;
+    font-weight: 600;
+    font-size: .74rem;
+    letter-spacing: .11em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    padding: 0 1rem .6rem 0;
+    border-bottom: 1px solid var(--ink);
+  }
+  td {
+    padding: .85rem 1rem .85rem 0;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+  td:first-child { font-weight: 500; white-space: nowrap; }
+  tr:last-child td { border-bottom: none; }
+
+  footer {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--ink);
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem 2rem;
+    align-items: baseline;
+    font-size: .9rem;
+    color: var(--ink-soft);
+  }
+  footer .contact {
+    font-family: Fraunces, Georgia, serif;
+    font-size: 1.05rem;
+    color: var(--ink);
+  }
+  a { color: var(--berry); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:focus-visible {
+    outline: 2px solid var(--teal);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* --- site navigation --- */
+  .masthead .wordmark a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .masthead .wordmark a:hover { text-decoration: underline; }
+
+  .sitenav {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    font-size: .9rem;
+  }
+
+  /* --- support page --- */
+  .contact-card {
+    margin: 2.25rem 0 0;
+    padding: 1.6rem 1.7rem;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: .45rem;
+  }
+  .contact-card .label {
+    font-size: .74rem;
+    letter-spacing: .11em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .contact-card .address {
+    font-family: Fraunces, Georgia, serif;
+    font-size: clamp(1.2rem, 4.5vw, 1.6rem);
+    word-break: break-word;
+  }
+  .contact-card .note {
+    font-size: .9rem;
+    color: var(--ink-soft);
+  }
+
+  .faq {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+  .faq h3 {
+    font-family: Fraunces, Georgia, serif;
+    font-weight: 600;
+    font-size: 1.08rem;
+    line-height: 1.3;
+    margin: 0 0 .3rem;
+  }
+  .faq p { margin: 0; font-size: .97rem; color: var(--ink-soft); }
