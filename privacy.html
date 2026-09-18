@@ -5,92 +5,68 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Scooks Privacy Policy</title>
 <meta name="description" content="How the Scooks iPhone app handles your book collection, Shelf Scan photos, and anti-abuse data.">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Rubik:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="page">
-  <header class="masthead">
-    <div class="wordmark"><a href="./">Scooks</a></div>
-    <h1>Privacy Policy</h1>
-    <div class="dateline">Last updated 11 September 2026</div>
-  </header>
+<h1>Scooks Privacy Policy</h1>
+<p class="meta">Last updated 18 September 2026</p>
 
-  <p class="standfirst">Scooks helps you catalogue the books you own and the ones you still want to read. This policy explains what the app handles, where it goes, and how long it stays.</p>
+<p>Scooks helps you catalogue the books you own and the ones you want to read. This policy explains what the app handles, where it goes, and how long it is kept.</p>
 
-  <p class="pledge">We do not sell your data. We do not use it for advertising. We do not track you across other apps or websites.</p>
+<p>We do not sell your data, use it for advertising, or track you across other apps or websites. Scooks has no accounts and does not ask for your name, email address, or contacts.</p>
 
-  <section>
-    <h2>What stays on your device</h2>
-    <p>Your collection, your wishlist, your ratings, and the cover art Scooks downloads are all stored locally on your iPhone. None of it is uploaded to us, and we cannot see it.</p>
-    <p>Deleting the app removes that data permanently. We have no copy, so we cannot restore it.</p>
-  </section>
+<h2>Data stored on your device</h2>
+<p>Your collection, wishlist, ratings, and downloaded cover images are stored only on your iPhone. They are not uploaded to us and we cannot see them. Deleting the app deletes this data permanently, and we have no copy we could restore.</p>
 
-  <section>
-    <h2>Shelf Scan photos</h2>
-    <p>When you photograph a bookshelf for a Shelf Scan, the photo is sent to our server and passed to Google's Gemini API, which reads the titles off the spines. Those titles are then looked up in the Hardcover book catalogue.</p>
-    <p>The photo is used only to produce that one result. It is never written to a database, a disk, or a backup on our side, and it is discarded as soon as the scan finishes. Google's handling of the image is governed by the Gemini API terms, under which submissions are not used to train their models.</p>
-    <p>Scooks never asks for access to your photo library. It uses the camera only, and only while you are on the Shelf Scan screen.</p>
-  </section>
+<h2>Shelf Scan photos</h2>
+<p>When you take a Shelf Scan photo, it is sent to our server and then to Google's Gemini API, which reads the titles on the book spines. We look up those titles in the Hardcover book catalogue.</p>
+<p>Our server does not save the photo. It is used for that one scan and discarded when the scan finishes.</p>
+<p>Google processes the photo under the <a href="https://ai.google.dev/gemini-api/terms">Gemini API Additional Terms of Service</a>. Under those terms Google may keep submitted content for a limited time to detect abuse. Google may also use it to improve its products, and human reviewers may see it. For that reason, avoid photographing people, documents, or anything private along with your shelf.</p>
+<p>Scooks uses only the camera, and only on the Shelf Scan screen. It never asks for access to your photo library.</p>
 
-  <section>
-    <h2>Book searches</h2>
-    <p>When you search for a book or ask for similar titles, the search text or book identifier is sent to our server and passed to the Hardcover catalogue. We keep no record of what you searched for.</p>
-  </section>
+<h2>Book summaries</h2>
+<p>To show a short summary of a book, Scooks sends the book's published catalogue description to our server, which asks Gemini to shorten it. This contains no information about you.</p>
 
-  <section>
-    <h2>Anti-abuse data</h2>
-    <p>To stop other people running up our API bills, the app sends two things with each scan request.</p>
-    <ul>
-      <li><strong>An installation identifier</strong>, a random value generated the first time you open the app. It is not your Apple ID, your device identifier, or anything that names you. It exists only to count requests per installation.</li>
-      <li><strong>An Apple App Attest assertion</strong>, which proves the request came from a genuine copy of Scooks rather than a script.</li>
-    </ul>
-    <p>Our server keeps the App Attest key record and a short-lived request counter tied to that identifier. Nothing in either describes you, your books, or your reading.</p>
-  </section>
+<h2>Searches and recommendations</h2>
+<p>When you search for a book, ask for similar titles, or use Book Date, the app sends the search text or the relevant book identifiers to our server. The server passes them to the Hardcover catalogue. We do not keep a record of your searches.</p>
 
-  <section>
-    <h2>Services we rely on</h2>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr><th scope="col">Service</th><th scope="col">What it receives</th><th scope="col">Why</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Cloudflare Workers</td><td>All app requests</td><td>Hosts our server</td></tr>
-          <tr><td>Google Gemini</td><td>Shelf Scan photos</td><td>Reads titles from book spines</td></tr>
-          <tr><td>Hardcover</td><td>Titles and search text</td><td>Book catalogue and cover art</td></tr>
-          <tr><td>Apple App Attest</td><td>Device attestation</td><td>Blocks fraudulent requests</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+<h2>Cover images</h2>
+<p>Cover images are downloaded directly from Hardcover's image servers. As with any image download, those servers receive your device's IP address.</p>
 
-  <section>
-    <h2>Children</h2>
-    <p>Scooks is not directed at children under 13, and we do not knowingly collect information from them.</p>
-  </section>
+<h2>Anti-abuse data</h2>
+<p>To stop our server from being misused, the app sends the following with each Shelf Scan:</p>
+<ul>
+  <li><strong>An installation identifier.</strong> This is a random value created the first time you open the app. It is not your Apple ID or your device's hardware or advertising identifier. We use it only to count requests from each installation.</li>
+  <li><strong>An Apple App Attest assertion.</strong> This proves the request came from a genuine copy of Scooks.</li>
+</ul>
+<p>Our server stores the App Attest key for each installation and keeps short-lived request counters. Some requests are also rate-limited by IP address. These counters expire within minutes. None of this data describes you, your books, or your reading.</p>
 
-  <section>
-    <h2>Your rights</h2>
-    <p>Because your collection never leaves your phone, you control it directly. Deleting a book removes it. Deleting the app removes everything. If you want the anti-abuse records for your installation erased, write to us and we will remove them.</p>
-  </section>
+<h2>Services we use</h2>
+<table>
+  <thead><tr><th>Service</th><th>What it receives</th><th>Why</th></tr></thead>
+  <tbody>
+    <tr><td>Cloudflare Workers</td><td>All requests to our server, including your IP address</td><td>Hosts our server</td></tr>
+    <tr><td>Google Gemini API</td><td>Shelf Scan photos and book descriptions</td><td>Reads spines and writes book summaries</td></tr>
+    <tr><td>Hardcover</td><td>Book titles, search text, and book identifiers; your IP address when downloading covers</td><td>Book catalogue and cover images</td></tr>
+    <tr><td>Apple App Attest</td><td>Device attestation</td><td>Confirms requests come from the real app</td></tr>
+  </tbody>
+</table>
 
-  <section>
-    <h2>Changes to this policy</h2>
-    <p>If anything here changes materially, we will update the date at the top of this page and note the change in the app's release notes.</p>
-  </section>
+<h2>Children</h2>
+<p>Scooks is not directed at children under 13, and we do not knowingly collect information from them.</p>
 
-  <nav class="sitenav">
-    <a href="./">Home</a>
-    <a href="support.html">Support</a>
-    <a href="mailto:andrew.z.hale1@gmail.com">Contact</a>
-  </nav>
+<h2>Your choices</h2>
+<p>Your collection is on your phone, so you control it directly: deleting a book removes it, and deleting the app removes everything. If you would like the anti-abuse records for your installation deleted, email us and we will remove them.</p>
 
-  <footer>
-    <span>Questions about this policy</span>
-    <a class="contact" href="mailto:andrew.z.hale1@gmail.com">andrew.z.hale1@gmail.com</a>
-  </footer>
-</div>
+<h2>Changes</h2>
+<p>If this policy changes in a meaningful way, we will update the date above and mention the change in the app's release notes.</p>
+
+<h2>Contact</h2>
+<p><a href="mailto:andrew.z.hale1@gmail.com">andrew.z.hale1@gmail.com</a></p>
+
+<nav>
+  <a href="./">Home</a>
+  <a href="support.html">Support</a>
+</nav>
 </body>
 </html>
